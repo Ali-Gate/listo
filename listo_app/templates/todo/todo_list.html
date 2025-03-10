@@ -1,0 +1,20 @@
+<!-- filepath: c:\Users\Ali\Documents\VS_CODE projects\listo\todo\templates\todo\todo_list.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>To-Do List</title>
+</head>
+<body>
+    <h1>To-Do List</h1>
+    <a href="{% url 'todo_form' %}">Add New Item</a>
+    <ul>
+        {% for todo in todos %}
+            <li>
+                {{ todo.title }} - {{ todo.description }}
+                <a href="{% url 'todo_update' todo.pk %}">Edit</a>
+                <a href="{% url 'todo_delete' todo.pk %}">Delete</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
