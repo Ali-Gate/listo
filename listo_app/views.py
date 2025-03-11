@@ -1,12 +1,8 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 from .models import TodoItem
 from .forms import TodoItemForm
 
 # Create your views here.
-def home(request):
-    return HttpResponse('Hello, World!  ' '  Are you Listo!?')
-
 def todo_list(request):
     todos = TodoItem.objects.all()
     return render(request, 'todo/todo_list.html', {'todos': todos})
@@ -37,4 +33,4 @@ def todo_delete(request, pk):
     if request.method == 'POST':
         todo.delete()
         return redirect('todo_list')
-    return render(request, 'todo/todo_confirm_delete.html', {'todo': todo})
+    return render(request, 'todo/todo_delete.html', {'todo': todo})
