@@ -16,8 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.views.generic import RedirectView
+from listo_app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('todo/', include('listo_app.urls')),    
+    path('todo/', include('listo_app.urls')),  
+    path('login/', views.user_login, name='login'),
+    path('', views.home, name='home'),  # Home page  
 ]

@@ -1,8 +1,28 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import TodoItem
 from .forms import TodoItemForm
+from django.contrib.auth import authenticate, login
+from django.contrib.auth.forms import AuthenticationForm
 
 # Create your views here.
+
+def home(request):
+    return render(request, 'home.html')
+
+def user_login(request):
+    if request.method == 'POST':
+        form = AuthenticationForm(request, data=request.POST)
+        if form.is_valid():
+            username = form.cleaned_data.get('username')
+            password = form.cleaned_data.get('password')
+            user = authenticate(username=username, password=password)
+            if user is not None:
+                login(request, user)
+                return redirect('todo_list')
+    else:
+        form = AuthenticationForm()
+    return render(request, 'login.html', {'form': form})
+
 def todo_list(request):
     todos = TodoItem.objects.all()
     return render(request, 'todo/todo_list.html', {'todos': todos})
