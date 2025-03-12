@@ -1,8 +1,9 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import TodoItem
 from .forms import TodoItemForm
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
@@ -23,9 +24,14 @@ def user_login(request):
         form = AuthenticationForm()
     return render(request, 'login.html', {'form': form})
 
+@login_required
 def todo_list(request):
     todos = TodoItem.objects.all()
     return render(request, 'todo/todo_list.html', {'todos': todos})
+
+def user_logout(request):
+    logout(request)
+    return redirect('home')
 
 def todo_create(request):
     if request.method == 'POST':
