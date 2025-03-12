@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+<!-- filepath: c:\Users\Ali\Documents\VS_CODE projects\listo\listo_app\templates\sign_up.html -->
+{% block content %}
+    <h1>Sign Up</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Sign Up</button>
+    </form>
+{% endblock %}

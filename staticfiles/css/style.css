@@ -16,3 +16,10 @@ a:hover {
     text-decoration: none;
     font-weight: bold;
 }
+
+#header {
+    background-color: #066e14;
+    color: white;
+    padding: 10px 0;
+    text-align: right;
+}

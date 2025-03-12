@@ -1,14 +1,15 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import TodoItem
-from .forms import TodoItemForm
+from .forms import TodoItemForm, signupForm
 from django.contrib.auth import authenticate, login, logout
-from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
 def home(request):
     return render(request, 'home.html')
+    template_name = "listo_app/home.html"
 
 def user_login(request):
     if request.method == 'POST':
@@ -32,6 +33,16 @@ def todo_list(request):
 def user_logout(request):
     logout(request)
     return redirect('home')
+
+def sign_up(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('login')
+    else:
+        form = UserCreationForm()
+    return render(request, 'sign_up.html', {'form': form})
 
 def todo_create(request):
     if request.method == 'POST':
