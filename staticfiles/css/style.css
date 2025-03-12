@@ -1,0 +1,18 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+h1 {
+    color: #333;
+}
+
+a {
+    color: #066e14;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    font-weight: bold;
+}
