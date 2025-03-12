@@ -3,6 +3,8 @@
 <html>
 <head>
     <title>Confirm Delete</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
 </head>
 <body>
     <h1>Are you sure you want to delete "{{ todo.title }}"?</h1>
