@@ -1,6 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Victor+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Victor Mono", monospace;
     color: #333;
+}
+
+.header {
+    background-color: #21ee65;
+    color: #ffffff;
+    padding: 10px 0;
+    text-align: right;
+    min-height: 100px;
+
 }
 
 h1 {
@@ -17,9 +28,56 @@ a:hover {
     font-weight: bold;
 }
 
-#header {
-    background-color: #066e14;
-    color: white;
-    padding: 10px 0;
-    text-align: right;
+.mainStyle {
+    background-color: aquamarine;
+    margin: 10% auto;
+    width: 80%;
+    padding: 30px;
+}
+
+/* Form Styles */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="email"],
+form input[type="datetime-local"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #21ee65;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form button[type="submit"]:hover {
+    background-color: #1cb954;
 }

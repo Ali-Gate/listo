@@ -34,7 +34,7 @@ def user_logout(request):
     logout(request)
     return redirect('home')
 
-def sign_up(request):
+def signup(request):
     if request.method == 'POST':
         form = UserCreationForm(request.POST)
         if form.is_valid():
@@ -42,7 +42,7 @@ def sign_up(request):
             return redirect('login')
     else:
         form = UserCreationForm()
-    return render(request, 'sign_up.html', {'form': form})
+    return render(request, 'signup.html', {'form': form})
 
 def todo_create(request):
     if request.method == 'POST':
