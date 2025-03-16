@@ -1,10 +1,12 @@
 {% extends 'base.html' %}
 <!-- filepath: c:\Users\Ali\Documents\VS_CODE projects\listo\todo\templates\todo\todo_confirm_delete.html -->
 {% block content %}
-    <h1>Are you sure you want to delete "{{ todo.title }}"?</h1>
+    <h1>Delete Task?</h1>
+    <p>Are you sure you want to delete "{{ todo.title }}"?</p>
+    <br>
     <form method="post">
         {% csrf_token %}
-        <button type="submit">Yes, delete</button>
+        <button class="btn-custom" type="submit">Yes, delete</button>
     </form>
-    <a href="{% url 'todo_list' %}">Cancel</a>
+    <a class="btn-custom" href="{% url 'todo_list' %}">Cancel</a>
 {% endblock %}

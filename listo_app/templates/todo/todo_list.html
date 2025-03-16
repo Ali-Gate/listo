@@ -1,18 +1,47 @@
 {% extends 'base.html' %}
 <!-- filepath: c:\Users\Ali\Documents\VS_CODE projects\listo\todo\templates\todo\todo_list.html -->
 {% block content %}
-    <h1>To-Do List</h1>
-    <a href="{% url 'todo_create' %}">Add New Item</a>
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mb-3">
+        <h1>To-Do List</h1>
+        <a href="{% url 'todo_create' %}" class="btn-custom mt-2 mt-md-0">New Task</a>
+    </div>
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Due Date</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for todo in todos %}
+                <tr>
+                    <td>{{ todo.title }}</td>
+                    <td>{{ todo.due_date|date:"d/m/Y" }}</td> <!-- Format the due date -->
+                    <td class="text-center">
+                        {% if todo.completed %}
+                        <i class="fa-solid fa-circle-check text-completed"></i> <!-- Completed Icon -->
+                        {% else %}
+                        <i class="fa-solid fa-clock-rotate-left text-pending"></i> <!-- Pending Icon -->
+                        {% endif %}
+                    </td>
+                    <td>
+                        <div class="d-flex justify-content-between">
+                            <a href="{% url 'todo_update' todo.pk %}" class="btn btn-sm icon-edit">
+                                <i class="fas fa-edit"></i> <!-- Edit Icon -->
+                            </a>
+                            <a href="{% url 'todo_delete' todo.pk %}" class="btn btn-sm icon-delete">
+                                <i class="fas fa-trash-alt"></i> <!-- Delete Icon -->
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+        
     <a href="{% url 'logout' %}">Logout</a>
-    <ul>
-        {% for todo in todos %}
-            <li>
-                {{ todo.title }} - {{ todo.description }}
-                <!--here we need to implement as request for the todo_form to render the task's content, but it will share the same form as create new task-->
-                <a href="{% url 'todo_update' todo.pk %}">Edit</a>
-                <!--here we need to implement as request for the todo_form to render the task's content, but it will share the same form as create new task-->
-                <a href="{% url 'todo_delete' todo.pk %}">Delete</a>
-            </li>
-        {% endfor %}
-    </ul>
 {% endblock %}

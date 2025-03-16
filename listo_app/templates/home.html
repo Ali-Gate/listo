@@ -1,16 +1,20 @@
 {% extends 'base.html' %}
 <!-- filepath: c:\Users\Ali\Documents\VS_CODE projects\listo\listo_app\templates\home.html -->
 {% block content %}
-
-    <h1>Welcome to your To-Do List App</h1>
-    {% if user.is_authenticated %}
-        <p>You are logged in as {{ user.username }}!</p>
-        <p>Go to your To-Do list</p>
-        <a href="{% url 'todo_list' %}">To-Do list</a>
-        <a href="{% url 'logout' %}">Logout</a>
-    {% else %}
-        <a href="{% url 'login' %}">Login</a> | 
-        <p>Don't have a Listo! account yet?</p>
-        <a href="{% url 'signup' %}">Sign up</a>
-    {% endif %}
+<div class="container d-flex flex-column align-items-center justify-content-center" style="min-height: calc(100vh - 150px);">
+    <div class="text-center">
+        <h1>Welcome to Listo!</h1>
+        <div class="my-3">
+            {% if user.is_authenticated %}
+            <p>Hi, {{ user.username }}. Let's get things done!</p>
+            <p>View and manage all your tasks:</p>
+            <a class="btn-custom" href="{% url 'todo_list' %}">To-Do List</a>
+            {% else %}
+            <a class="btn-custom" href="{% url 'login' %}">Login</a>
+            <p>Don't have a Listo! account yet?</p>
+            <a class="btn-custom" href="{% url 'signup' %}">Sign up</a>
+            {% endif %}
+        </div>
+    </div>
+</div>
 {% endblock %}
