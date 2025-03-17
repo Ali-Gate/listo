@@ -4,20 +4,51 @@ html body {
     font-family: "Victor Mono", monospace; 
     color: #525252;
 }
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 150px; /* Adjust based on header height */
+    padding-bottom: 50px; /* Adjust based on footer height */
+    overflow-y: auto;
+}
 
 footer {
-    padding: 10x 0;
+    background-color: #f8f9fa;
+    padding: 10px 0;
     text-align: center;
     color: #0abe13;
     font-size: 0.8rem;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
 }
 
 
+
 /* Header Styles */
+header {
+    background-color: #0abe13;
+    color: #ffffff;
+    text-align: right;
+    vertical-align: middle;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
 
 .header {
     background-color: #0abe13;
-    padding: 15px 10px;
 }
 
 .header * {
@@ -28,6 +59,14 @@ footer {
 
 h1 {
     font-size: 1.7rem !important;
+}
+
+.salutation {
+    display: inline-block;
+    padding: 0px 5px 10px 5px;
+    font-size: 0.7rem;
+    text-align: right;
+    width: 100%;
 }
 
 
@@ -47,7 +86,7 @@ table td, table th {
 }
 
 tbody {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 }
 
 /* Table: Todo List Icons Styles */
@@ -88,17 +127,11 @@ a:hover {
     font-weight: bold;
 }
 
-.salutation {
-    display: inline-block;
-    margin: 5px -10px;
-    font-size: 0.8rem;
-    text-align: right;
-    width: 100%;
-    padding-top: 5px;
-}
 
-.logo_style {
+
+#logo_style {
     text-align: center;
+    vertical-align: middle;
 }
 
 /* Form Styles */
@@ -143,8 +176,8 @@ form input[type="datetime-local"] {
 /* Global Button Styles */
 .btn-custom {
     display: inline-block;
-    padding: 6px 14px;
-    font-size: 14px;
+    padding: 6px 10px;
+    font-size: 0.8rem;
     font-weight: bold;
     text-align: center;
     text-decoration: none;
@@ -153,6 +186,7 @@ form input[type="datetime-local"] {
     border: none;
     border-radius: 4px;
     transition: background-color 0.3s ease;
+    margin-top: 10px;
 }
 
 .btn-custom:hover {
@@ -182,5 +216,22 @@ form input[type="datetime-local"] {
 @media (pointer: coarse) {
     body {
         overflow-y: hidden;
+    }
+}
+
+/* Media Query for Small Screens main element size*/
+@media (max-width: 576px) {
+    #homeMain {
+        vertical-align: top;
+        padding-top: 50px;
+    }
+}
+
+/* Media Query for Medium Screens */
+@media (min-width: 577px) and (max-width: 992px) {
+    #homeMain {
+        vertical-align: top;
+        padding-top: 80px;
+       
     }
 }

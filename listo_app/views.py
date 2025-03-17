@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import TodoItem
+from django.http import JsonResponse
 from .forms import TodoItemForm, signupForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
@@ -48,10 +49,10 @@ def todo_create(request):
     if request.method == 'POST':
         form = TodoItemForm(request.POST)
         if form.is_valid():
-            todo = form.save(commit=False)
-            todo.owner = request.user  # Set the owner to the logged-in user
-            todo.save()
-            return redirect('todo_list')
+            form.save()
+            return JsonResponse({'success': True})
+        else:
+            return JsonResponse({'success': False, 'errors': form.errors})
     else:
         form = TodoItemForm()
     return render(request, 'todo/todo_form.html', {'form': form})

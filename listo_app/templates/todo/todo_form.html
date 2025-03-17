@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
 <!-- filepath: c:\Users\Ali\Documents\VS_CODE projects\listo\todo\templates\todo\todo_form.html -->
 {% block content %}
-    <h1>To-Do Form</h1>
-    <form method="post">
+    <h1>Add a new task</h1>
+    <form id="todoItemForm" method="post" action="{% url 'todo_create' %}">
         {% csrf_token %}
         {{ form.as_p }}
         <button class="btn-custom" type="submit">Save</button>

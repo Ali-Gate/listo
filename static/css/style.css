@@ -13,8 +13,12 @@ html, body {
 
 main {
     flex: 1;
-    margin-top: 100px; /* Adjust based on header height */
-    margin-bottom: 50px; /* Adjust based on footer height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 150px; /* Adjust based on header height */
+    padding-bottom: 50px; /* Adjust based on footer height */
     overflow-y: auto;
 }
 
@@ -215,10 +219,19 @@ form input[type="datetime-local"] {
     }
 }
 
-/* Media Query for Small Screens main elemnet size*/
+/* Media Query for Small Screens main element size*/
 @media (max-width: 576px) {
-    main {
-        margin-top: 80px; /* Adjust based on header height for small screens */
-        margin-bottom: 40px; /* Adjust based on footer height for small screens */
+    #homeMain {
+        vertical-align: top;
+        padding-top: 50px;
+    }
+}
+
+/* Media Query for Medium Screens */
+@media (min-width: 577px) and (max-width: 992px) {
+    #homeMain {
+        vertical-align: top;
+        padding-top: 80px;
+       
     }
 }
