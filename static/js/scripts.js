@@ -1,5 +1,6 @@
 // filepath: c:\Users\Ali\Documents\VS_CODE projects\listo\static\js\scripts.js
 
+/*
 function showToast(message, duration = 10000) {
     const toastContainer = document.getElementById('toastContainer');
     const toastTemplate = document.getElementById('toastTemplate');
@@ -9,14 +10,16 @@ function showToast(message, duration = 10000) {
     const toast = new bootstrap.Toast(newToast);
     toast.show();
 }
+*/
+  
 
-document.addEventListener('DOMContentLoaded', function() {
-    const todoItemForm = document.getElementById('todoItemForm');
-    if (todoItemForm) {
-        todoItemForm.addEventListener('submit', function(event) {
+/* document.addEventListener('DOMContentLoaded', function() {
+    const todoForm = document.getElementById('todoItemForm');
+    if (todoForm) {
+        todoForm.addEventListener('submit', function(event) {
             event.preventDefault(); // Prevent the default form submission
-            const formData = new FormData(todoItemForm);
-            fetch(todoItemForm.action, {
+            const formData = new FormData(todoForm);
+            fetch(todoForm.action, {
                 method: 'POST',
                 body: formData,
                 headers: {
@@ -37,3 +40,4 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+*/
