@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Victor+Mono:ital,wght@0,100..700;1,100..700&display=swap');
-
+* {
+    --bs-nav-link-color: #ffffff;
+}
 html body {
     font-family: "Victor Mono", monospace; 
     color: #525252;
@@ -9,6 +11,10 @@ html, body {
     margin: 0;
     display: flex;
     flex-direction: column;
+}
+
+body h1 {
+    font-size: 1.7rem;
 }
 
 main {
@@ -51,15 +57,13 @@ header {
     background-color: #0abe13;
 }
 
-.header * {
-    color: #ffffff !important;
+body nav .header * {
+    color: #ffffff todoItemForm;
     text-align: right;
     vertical-align: middle;
 }
 
-h1 {
-    font-size: 1.7rem !important;
-}
+
 
 .salutation {
     display: inline-block;
@@ -90,20 +94,20 @@ tbody {
 }
 
 /* Table: Todo List Icons Styles */
-.text-completed {
-    color: #0abe13 !important; /* Green color for completed tasks */
+table .text-completed {
+    color: #0abe13; /* Green color for completed tasks */
 }
 
-.text-pending {
-    color: #dc3545 !important; /* Red color for pending tasks */
+table .text-pending {
+    color: #dc3545; /* Red color for pending tasks */
 }
 
-.icon-edit {
-    color: #0abe13 !important; /* Blue color for edit icon */
+table .icon-edit {
+    color: #0abe13; /* Blue color for edit icon */
 }
 
-.icon-delete {
-    color: #525252 !important; /* Red color for delete icon */
+table .icon-delete {
+    color: #525252; /* Red color for delete icon */
 }
 
 
@@ -118,7 +122,7 @@ nav .navbar-toggler-custom .navbar-toggler-icon {
 }
 
 a {
-    color: #ffffff !important;
+    color: #ffffff ;
     text-decoration: none;
 }
 

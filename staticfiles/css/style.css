@@ -51,14 +51,14 @@ header {
     background-color: #0abe13;
 }
 
-.header * {
-    color: #ffffff !important;
+body .header * {
+    color: #ffffff;
     text-align: right;
     vertical-align: middle;
 }
 
 h1 {
-    font-size: 1.7rem !important;
+    font-size: 1.7rem;
 }
 
 .salutation {
@@ -90,20 +90,20 @@ tbody {
 }
 
 /* Table: Todo List Icons Styles */
-.text-completed {
-    color: #0abe13 !important; /* Green color for completed tasks */
+table .text-completed {
+    color: #0abe13; /* Green color for completed tasks */
 }
 
-.text-pending {
-    color: #dc3545 !important; /* Red color for pending tasks */
+table .text-pending {
+    color: #dc3545; /* Red color for pending tasks */
 }
 
 .icon-edit {
-    color: #0abe13 !important; /* Blue color for edit icon */
+    color: #0abe13; /* Blue color for edit icon */
 }
 
 .icon-delete {
-    color: #525252 !important; /* Red color for delete icon */
+    color: #525252; /* Red color for delete icon */
 }
 
 
@@ -115,11 +115,6 @@ nav .navbar-toggler-custom {
 }
 nav .navbar-toggler-custom .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-}
-
-a {
-    color: #0abe13 !important;
-    text-decoration: none;
 }
 
 a:hover {
@@ -136,7 +131,7 @@ a:hover {
 
 /* Form Styles */
 form {
-    font-size: 0.7rem !important;
+    font-size: 0.7rem;
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
@@ -151,7 +146,7 @@ form h1 {
 }
 
 form label {
-    font-size: 1rem !important;
+    font-size: 1rem;
     display: block;
     margin-bottom: 5px;
     font-weight: bold;

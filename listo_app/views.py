@@ -28,7 +28,6 @@ def user_login(request):
 
 @login_required
 def todo_list(request):
-    messages.success(request, 'You signed up successfully. Welcome to your todo list!')
     todos = TodoItem.objects.filter(owner=request.user) 
     return render(request, 'todo/todo_list.html', {'todos': todos})
 
