@@ -22,7 +22,7 @@ main {
     display: block;
     align-items: center;    
     overflow-y: auto;
-    margin: 122.8px; /* Adjust based on header height */
+    margin-top: 122.8px; /* Adjust based on header height */
     margin-bottom: 50px; /* Adjust based on footer height */
 }
 
