@@ -18,6 +18,7 @@ body h1 {
     font-size: 1.7rem;
 }
 
+
 main {
     display: block;
     align-items: center;    
@@ -25,6 +26,10 @@ main {
     margin-top: 122.8px; /* Adjust based on header height */
     margin-bottom: 50px; /* Adjust based on footer height */
 }
+
+
+
+
 
 footer {
     background-color: #f8f9fa;
@@ -224,19 +229,23 @@ form input[type="datetime-local"] {
     }
 }
 
+#homeMain h1 {
+    padding-top: 60px;
+}
+
 /* Media Query for Small Screens main element size*/
-/*@media (max-width: 576px) {
-    #homeMain {
-        vertical-align: top;
-        padding-top: 50px;
+@media (max-width: 768px) {
+    #homeMain h1 {
+        padding-top: 0px;
     }
-}*/
+    #homeMain {
+        text-align: center;
+    }
+}
 
 /* Media Query for Medium Screens */
 /*@media (min-width: 577px) and (max-width: 992px) {
     #homeMain {
-        vertical-align: top;
-        padding-top: 80px;
-       
+        padding-top: 0px;      
     }
-}*/
+} */
