@@ -28,19 +28,26 @@ def user_login(request):
 
 @login_required
 def todo_list(request):
+    messages.success(request, 'You signed up successfully. Welcome to your todo list!')
     todos = TodoItem.objects.filter(owner=request.user) 
     return render(request, 'todo/todo_list.html', {'todos': todos})
 
 def user_logout(request):
-    logout(request)
-    return redirect('home')
+    if request.method == 'POST':
+        logout(request)
+        messages.success(request, 'You have been successfully logged out.')
+        return redirect('home')
+    return render(request, 'logout_confirm.html')
 
 def signup(request):
     if request.method == 'POST':
         form = UserCreationForm(request.POST)
         if form.is_valid():
             form.save()
+            messages.success(request, 'Account created successfully! Please login.')
             return redirect('login')
+        else:
+            messages.error(request, 'Invalid form submission. Please check the errors below.')
     else:
         form = UserCreationForm()
     return render(request, 'signup.html', {'form': form})
@@ -72,6 +79,10 @@ def todo_create_or_update(request, pk=None):
 def todo_delete(request, pk):
     todo = get_object_or_404(TodoItem, pk=pk, owner=request.user)  # Ensure the task belongs to the logged-in user
     if request.method == 'POST':
-        todo.delete()
-        return redirect('todo_list')
+        try:
+            todo.delete()
+            messages.success(request, 'Task deleted successfully!')
+            return redirect('todo_list')
+        except Exception as e:
+            messages.error(request, 'Error deleting task.')
     return render(request, 'todo/todo_delete.html', {'todo': todo})

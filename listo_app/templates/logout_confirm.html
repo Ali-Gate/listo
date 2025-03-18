@@ -1,0 +1,11 @@
+<!-- filepath: c:\Users\Ali\Documents\VS_CODE projects\listo\listo_app\templates\logout_confirm.html -->
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Confirm Logout</h1>
+    <p>Are you sure you want to log out?</p>
+    <form method="post">
+        {% csrf_token %}
+        <button class="btn-custom" type="submit">Logout</button>
+        <a href="{% url 'home' %}" class="btn btn-secondary">Cancel</a>
+    </form>
+{% endblock %}
