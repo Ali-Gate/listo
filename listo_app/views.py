@@ -21,7 +21,12 @@ def user_login(request):
             user = authenticate(username=username, password=password)
             if user is not None:
                 login(request, user)
+                messages.success(request, 'You have been successfully logged in.')
                 return redirect('todo_list')
+            else:
+                messages.error(request, 'Invalid username or password.')
+        else:
+            messages.error(request, 'Invalid form submission. Please check your credentials.')
     else:
         form = AuthenticationForm()
     return render(request, 'login.html', {'form': form})
