@@ -1,15 +1,15 @@
 from django.urls import path
-from .views import home, user_login, user_logout, todo_list, todo_create, todo_update, todo_delete, signup
+from .views import home, user_login, user_logout, todo_list, todo_create_or_update, todo_delete, signup
 from . import views
 
 
 urlpatterns = [
-    path('', home, name='home'),
-    path('login/', user_login, name='login'),
-    path('logout/', user_logout, name='logout'),
-    path('list/', todo_list, name='todo_list'),  # Changed from 'todo/' to 'list/'
-    path('create/', todo_create, name='todo_create'),
-    path('update/<int:pk>/', todo_update, name='todo_update'),
-    path('delete/<int:pk>/', todo_delete, name='todo_delete'),
-    path('signup/', signup, name='signup'), 
+    path('', views.home, name='home'),
+    path('login/', views.user_login, name='login'),
+    path('logout/', views.user_logout, name='logout'),
+    path('list/', views.todo_list, name='todo_list'),
+    path('create/', views.todo_create_or_update, name='todo_create'),
+    path('update/<int:pk>/', views.todo_create_or_update, name='todo_update'),
+    path('delete/<int:pk>/', views.todo_delete, name='todo_delete'),
+    path('signup/', views.signup, name='signup'),
 ]

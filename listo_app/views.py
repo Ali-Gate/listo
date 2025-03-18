@@ -45,27 +45,26 @@ def signup(request):
         form = UserCreationForm()
     return render(request, 'signup.html', {'form': form})
 
-def todo_create(request):
-    if request.method == 'POST':    
-        form = TodoItemForm(request.POST)
+@login_required
+def todo_create_or_update(request, pk=None):
+    if pk:
+        todo = get_object_or_404(TodoItem, pk=pk, owner=request.user)  # Ensure the task belongs to the logged-in user
+    else:
+        todo = None
+
+    if request.method == 'POST':
+        form = TodoItemForm(request.POST, instance=todo)
         if form.is_valid():
             todo = form.save(commit=False)
             todo.owner = request.user  # Set the owner to the logged-in user
             todo.save()
-            messages.add_message(request, messages.SUCCESS, 'Task saved successfully!')
+            if pk:
+                messages.success(request, 'Task updated successfully!')
+            else:
+                messages.success(request, 'Task created successfully!')
             return redirect('todo_list')
-    else:
-        form = TodoItemForm()
-        messages.add_message(request, messages.ERROR, 'Error saving task!')
-    return render(request, 'todo/todo_form.html', {'form': form})
-
-def todo_update(request, pk):
-    todo = get_object_or_404(TodoItem, pk=pk, owner=request.user) # Ensure the task belongs to the logged-in user
-    if request.method == 'POST':
-        form = TodoItemForm(request.POST, instance=todo)
-        if form.is_valid():
-            form.save()
-            return redirect('todo_list')
+        else:
+            messages.error(request, 'Invalid form submission.')
     else:
         form = TodoItemForm(instance=todo)
     return render(request, 'todo/todo_form.html', {'form': form})
