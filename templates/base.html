@@ -48,6 +48,8 @@
         <div class="salutation">
           {% if request.user.is_authenticated %}
           You are logged in as <span class="username">{{ request.user.username }}</span>
+          {% else %}
+          You are currently not logged in
           {% endif %}
         </div>
       </div>

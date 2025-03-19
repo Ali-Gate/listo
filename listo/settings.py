@@ -33,6 +33,9 @@ DEBUG = 'DEBUG' in os.environ
 
 ALLOWED_HOSTS = ['.herokuapp.com', '127.0.0.1',]
 
+# Login URL
+LOGIN_URL = '/login/'  # Update this to match your login URL pattern
+
 
 # Application definition
 

@@ -3,6 +3,8 @@
     --bs-nav-link-color: #ffffff;
     --bs-nav-link-hover-color: #ffffff;
     --bs-btn-close-color: #ffffff;
+    --bs-link-color-rgb: 82, 82, 82;
+    --bs-link-hover-color-rgb: 82, 82, 82;
 }
 
 /* Global Styles */
@@ -22,6 +24,11 @@ html, body {
 
 body h1 {
     font-size: 1.7rem;
+}
+
+body p {
+    margin-top: 10px;
+    margin-bottom: 1px;
 }
 
 
@@ -126,7 +133,7 @@ table .icon-edit {
 }
 
 table .icon-delete {
-    color: #525252; /* Red color for delete icon */
+    color: rgb(82, 82, 82); /* Red color for delete icon */
 }
 
 
@@ -150,6 +157,10 @@ a {
     font-weight: bold;
 }
 
+.nav-link:active {
+    font-weight: bold;
+}
+
 
 
 #logo_style {
@@ -162,6 +173,7 @@ form {
     font-size: 0.7rem;
     max-width: 400px;
     padding: 20px;
+    margin: 20px 0px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -208,7 +220,7 @@ form input[type="datetime-local"] {
 .btn-custom {
     display: inline-block;
     padding: 6px 10px;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     text-align: center;
     text-decoration: none;
     color: #fff;
@@ -235,7 +247,7 @@ form input[type="datetime-local"] {
 .btn-custom-secondary {
     display: inline-block;
     padding: 6px 10px;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     background-color: #ffffff;
     color: #525252;
     border: 1px solid #525252;
