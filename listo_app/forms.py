@@ -17,5 +17,4 @@ class signupForm(forms.ModelForm):
         widgets = {
             'password': forms.PasswordInput()
         }
-
      
