@@ -1,9 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Victor+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+* {
+    --bs-nav-link-color: #ffffff;
+    --bs-nav-link-hover-color: #ffffff;
+    --bs-btn-close-color: #ffffff;
+}
 
+/* Global Styles */
 html body {
     font-family: "Victor Mono", monospace; 
     color: #525252;
 }
+
+
 html, body {
     height: 100%;
     margin: 0;
@@ -11,16 +19,20 @@ html, body {
     flex-direction: column;
 }
 
-main {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: 150px; /* Adjust based on header height */
-    padding-bottom: 50px; /* Adjust based on footer height */
-    overflow-y: auto;
+
+body h1 {
+    font-size: 1.7rem;
 }
+
+
+main {
+    display: block;
+    align-items: center;    
+    overflow-y: auto;
+    margin-top: 122.8px; /* Adjust based on header height */
+    margin-bottom: 50px; /* Adjust based on footer height */
+}
+
 
 footer {
     background-color: #f8f9fa;
@@ -33,6 +45,15 @@ footer {
     bottom: 0;
 }
 
+.align-center {
+    text-align: center;
+}
+
+/*message styles*/
+.message {
+    max-width: 100%;
+    text-align: right;
+}
 
 
 /* Header Styles */
@@ -51,22 +72,24 @@ header {
     background-color: #0abe13;
 }
 
-body .header * {
-    color: #ffffff;
+body nav .header * {
+    color: #ffffff todoItemForm;
     text-align: right;
     vertical-align: middle;
 }
 
-h1 {
-    font-size: 1.7rem;
-}
-
 .salutation {
     display: inline-block;
-    padding: 0px 5px 10px 5px;
+    padding: 0px 8px 15px 0px;
     font-size: 0.7rem;
     text-align: right;
     width: 100%;
+}
+
+.username {
+    font-weight: bold;
+    -webkit-text-stroke-width: 1px;
+   -webkit-text-stroke-color: #ffffff;
 }
 
 
@@ -98,11 +121,11 @@ table .text-pending {
     color: #dc3545; /* Red color for pending tasks */
 }
 
-.icon-edit {
+table .icon-edit {
     color: #0abe13; /* Blue color for edit icon */
 }
 
-.icon-delete {
+table .icon-delete {
     color: #525252; /* Red color for delete icon */
 }
 
@@ -117,7 +140,12 @@ nav .navbar-toggler-custom .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
-a:hover {
+a {
+    color: #ffffff ;
+    text-decoration: none;
+}
+
+.nav-link:hover {
     text-decoration: none;
     font-weight: bold;
 }
@@ -213,19 +241,23 @@ form input[type="datetime-local"] {
     }
 }
 
+#homeMain h1 {
+    padding-top: 60px;
+}
+
 /* Media Query for Small Screens main element size*/
-@media (max-width: 576px) {
+@media (max-width: 768px) {
+    #homeMain h1 {
+        padding-top: 0px;
+    }
     #homeMain {
-        vertical-align: top;
-        padding-top: 50px;
+        text-align: center;
     }
 }
 
 /* Media Query for Medium Screens */
-@media (min-width: 577px) and (max-width: 992px) {
+/*@media (min-width: 577px) and (max-width: 992px) {
     #homeMain {
-        vertical-align: top;
-        padding-top: 80px;
-       
+        padding-top: 0px;      
     }
-}
+} */
