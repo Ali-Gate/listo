@@ -21,8 +21,8 @@
             data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse alignNav" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
+          <div class="nav-link:hover collapse navbar-collapse alignNav" id="navbarNav">
+            <ul class="nav-link:hover navbar-nav ms-auto">
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'home' %}">Home</a>
               </li>
@@ -47,7 +47,7 @@
       <div class="container-fluid">
         <div class="salutation">
           {% if request.user.is_authenticated %}
-          You are logged in as <strong>{{ request.user.username }}</strong>
+          You are logged in as <span class="username">{{ request.user.username }}</span>
           {% endif %}
         </div>
       </div>
@@ -55,17 +55,16 @@
   </header>
   
   <main>
-    <!-- Messages -->
-    <div class="row">
-      <div class="col-md-8 offset-md-2">
+    <!-- Messages -->    
+      <div class="container">
           {% for message in messages %}
-          <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
+          <div class="alert {{ message.tags }} alert-dismissible fade show message" id="msg" role="alert">
             {{ message | safe }}
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">X</button>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
           </div>
           {% endfor %}
       </div>
-    </div>
+    
     
     <div class="container my-3">
       <div class="row mx-0">

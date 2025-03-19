@@ -1,18 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Victor+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 * {
     --bs-nav-link-color: #ffffff;
+    --bs-nav-link-hover-color: #ffffff;
     --bs-btn-close-color: #ffffff;
 }
+
+/* Global Styles */
 html body {
     font-family: "Victor Mono", monospace; 
     color: #525252;
 }
+
+
 html, body {
     height: 100%;
     margin: 0;
     display: flex;
     flex-direction: column;
 }
+
 
 body h1 {
     font-size: 1.7rem;
@@ -26,9 +32,6 @@ main {
     margin-top: 122.8px; /* Adjust based on header height */
     margin-bottom: 50px; /* Adjust based on footer height */
 }
-
-
-
 
 
 footer {
@@ -46,6 +49,11 @@ footer {
     text-align: center;
 }
 
+/*message styles*/
+.message {
+    max-width: 100%;
+    text-align: right;
+}
 
 
 /* Header Styles */
@@ -70,14 +78,18 @@ body nav .header * {
     vertical-align: middle;
 }
 
-
-
 .salutation {
     display: inline-block;
     padding: 0px 8px 15px 0px;
     font-size: 0.7rem;
     text-align: right;
     width: 100%;
+}
+
+.username {
+    font-weight: bold;
+    -webkit-text-stroke-width: 1px;
+   -webkit-text-stroke-color: #ffffff;
 }
 
 
@@ -133,7 +145,7 @@ a {
     text-decoration: none;
 }
 
-a:hover {
+.nav-link:hover {
     text-decoration: none;
     font-weight: bold;
 }
