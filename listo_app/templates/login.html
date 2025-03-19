@@ -1,10 +1,12 @@
 {% extends 'base.html' %}
 <!-- filepath: c:\Users\Ali\Documents\VS_CODE projects\listo\listo_app\templates\login.html -->
 {% block content %}
+<div id="homeMain" class="container flex-column align-items-center justify-content-center" style="min-height: calc(100vh - 150px);">
     <h1>Login</h1>
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
         <button class="btn-custom" type="submit">Login</button>
     </form>
+</div>
 {% endblock %}

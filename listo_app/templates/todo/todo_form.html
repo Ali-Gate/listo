@@ -2,11 +2,13 @@
 <!-- filepath: c:\Users\Ali\Documents\VS_CODE projects\listo\todo\templates\todo\todo_form.html -->
 
 {% block content %}
-    <h1>{% if form.instance.pk %}Edit{% else %}Create{% endif %} To-Do</h1>
+<div id="homeMain" class="container flex-column align-items-center justify-content-center" style="min-height: calc(100vh - 150px);">
+    <h1>{% if form.instance.pk %}Edit{% else %}Add a new{% endif %} task</h1>
     <form id="todoForm" method="post"
         action="{% if form.instance.pk %}{% url 'todo_update' pk=form.instance.pk %}{% else %}{% url 'todo_create' %}{% endif %}">
         {% csrf_token %}
         {{ form.as_p }}
         <button class="btn-custom" type="submit">Save</button>
     </form>
+</div>
 {% endblock %}

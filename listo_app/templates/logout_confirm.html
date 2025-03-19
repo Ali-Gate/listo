@@ -1,6 +1,7 @@
 <!-- filepath: c:\Users\Ali\Documents\VS_CODE projects\listo\listo_app\templates\logout_confirm.html -->
 {% extends 'base.html' %}
 {% block content %}
+<div id="homeMain" class="container flex-column align-items-center justify-content-center" style="min-height: calc(100vh - 150px);">
     <h1>Confirm Logout</h1>
     <p>Are you sure you want to log out?</p>
     <form method="post">
@@ -8,4 +9,5 @@
         <button class="btn-custom" type="submit">Logout</button>
         <a href="{% url 'todo_list' %}" class="btn btn-secondary">Cancel</a>
     </form>
+</div>
 {% endblock %}
