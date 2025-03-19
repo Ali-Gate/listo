@@ -7,7 +7,7 @@ class TodoItemForm(forms.ModelForm):
         model = TodoItem
         fields = ['title', 'completed', 'due_date']
         widgets = {
-           'due_date': forms.DateTimeInput(attrs={'type': 'datetime-local'}),
+           'due_date': forms.DateInput(attrs={'type': 'date' , 'class': 'custom-date-input'}),
         }
 
 class signupForm(forms.ModelForm):
