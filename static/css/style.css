@@ -45,7 +45,7 @@ footer {
     background-color: #f8f9fa;
     padding: 10px 0;
     text-align: center;
-    color: #0abe13;
+    color: #009e08;
     font-size: 0.8rem;
     width: 100%;
     position: fixed;
@@ -65,7 +65,7 @@ footer {
 
 /* Header Styles */
 header {
-    background-color: #0abe13;
+    background-color: #009e08;
     color: #ffffff;
     text-align: right;
     vertical-align: middle;
@@ -76,7 +76,7 @@ header {
 }
 
 .header {
-    background-color: #0abe13;
+    background-color: #009e08;
 }
 
 body nav .header * {
@@ -112,7 +112,7 @@ table {
 }
 
 table td, table th {
-    border-color: #0abe13;
+    border-color: #009e08;
 }
 
 tbody {
@@ -121,7 +121,7 @@ tbody {
 
 /* Table: Todo List Icons Styles */
 table .text-completed {
-    color: #0abe13; /* Green color for completed tasks */
+    color: #009e08; /* Green color for completed tasks */
 }
 
 table .text-pending {
@@ -129,7 +129,7 @@ table .text-pending {
 }
 
 table .icon-edit {
-    color: #0abe13; /* Blue color for edit icon */
+    color: #009e08; /* Blue color for edit icon */
 }
 
 table .icon-delete {
@@ -150,17 +150,16 @@ nav .navbar-toggler-custom .navbar-toggler-icon {
 a {
     color: #ffffff ;
     text-decoration: none;
+    font-weight: bold;
 }
 
 .nav-link:hover {
-    text-decoration: none;
-    font-weight: bold;
+    color: #d8fcaf
 }
 
-.nav-link:active {
+.nav-link.active {
     font-weight: bold;
 }
-
 
 
 #logo_style {
@@ -224,7 +223,7 @@ form input[type="datetime-local"] {
     text-align: center;
     text-decoration: none;
     color: #fff;
-    background-color: #0abe13;
+    background-color: #009e08;
     border: none;
     border-radius: 4px;
     transition: background-color 0.3s ease;
@@ -232,7 +231,7 @@ form input[type="datetime-local"] {
 }
 
 .btn-custom:hover {
-    background-color: #0abe13;
+    background-color: #009e08;
     box-shadow: #525252 0px 0px 1px;
 }
 

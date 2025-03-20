@@ -1,6 +1,8 @@
 from django import forms
-from .models import TodoItem, Comment
+from .models import TodoItem
 from django.contrib.auth.models import User
+from django.test import TestCase
+from .forms import CommentForm
 
 class TodoItemForm(forms.ModelForm):
     class Meta:
@@ -18,8 +20,11 @@ class signupForm(forms.ModelForm):
             'password': forms.PasswordInput()
         }
 
-class CommentForm(forms.ModelForm):
-    class Meta:
-        model = Comment
-        fields = ['body']
-     
+class TestForms(TestCase):
+    def test_form_is_valid(self):
+        comment_form = CommentForm({'body': 'This is a great post'})
+        self.assertTrue(comment_form.is_valid(), msg='Form is not valid') 
+
+    def test_form_is_invalid(self):
+        comment_form = CommentForm({'body': ''})
+        self.assertFalse(comment_form.is_valid(), msg="Form is valid")
