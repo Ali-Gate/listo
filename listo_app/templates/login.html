@@ -3,10 +3,10 @@
 {% block content %}
 <div id="homeMain" class="container flex-column align-items-center justify-content-center" style="min-height: calc(100vh - 150px);">
     <h1>Login</h1>
-    <form method="post">
+    <form aria-label="login form" method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <button class="btn-custom" type="submit">Login</button>
+        <button aria-label="submit login information" class="btn-custom" type="submit">Login</button>
     </form>
 </div>
 {% endblock %}

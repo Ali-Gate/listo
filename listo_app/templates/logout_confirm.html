@@ -2,12 +2,12 @@
 {% extends 'base.html' %}
 {% block content %}
 <div id="homeMain" class="container flex-column align-items-center justify-content-center" style="min-height: calc(100vh - 150px);">
-    <h1>Confirm Logout</h1>
+    <h1 >Confirm Logout</h1>
     <p>Are you sure you want to log out?</p>
-    <form method="post">
+    <form aria-label="logout form"  method="post">
         {% csrf_token %}
-        <button class="btn-custom" type="submit">Logout</button>
-        <a href="{% url 'todo_list' %}">Cancel</a>
+        <button aria-label="Logout confirmation" class="btn-custom" type="submit">Logout</button>
+        <a aria-label="remain logged in" href="{% url 'todo_list' %}">Cancel</a>
     </form>
 </div>
 {% endblock %}

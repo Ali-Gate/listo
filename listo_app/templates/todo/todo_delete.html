@@ -5,10 +5,10 @@
     <h1>Delete Task?</h1>
     <p>Are you sure you want to delete "{{ todo.title }}"?</p>
     <br>
-    <form method="post">
+    <form aria-label="delete task confirmation" method="post">
         {% csrf_token %}
-        <button class="btn-custom" type="submit">Delete</button>
-        <a href="{% url 'todo_list' %}" >Cancel</a>
+        <button aria-label="delete task button" class="btn-custom" type="submit">Delete</button>
+        <a aria-label="cancel delete button" href="{% url 'todo_list' %}">Cancel</a>
     </form>
 </div>
 {% endblock %}

@@ -4,7 +4,7 @@
 {% block content %}
   
   <!-- Modal -->
-  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" aria-label="warning creating task after due date">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -15,22 +15,22 @@
           You are creating a task with a due date in the past. Are you sure you want to proceed?
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn-custom-secondary" data-bs-dismiss="modal">No</button>
-          <button type="button" class="btn-custom" id="confirm-submit">Yes</button>
+          <button type="button" class="btn-custom-secondary" data-bs-dismiss="modal" aria-label="cancel">No</button>
+          <button type="button" class="btn-custom" id="confirm-submit"  aria-label="yes, create task anyway">Yes</button>
         </div>
       </div>
     </div>
   </div>
 
 <div id="homeMain" class="container flex-column align-items-center justify-content-center" style="min-height: calc(100vh - 150px);">
-    <h1>{% if form.instance.pk %}Edit{% else %}Add a new{% endif %} task</h1>
-    <form id="todoForm" method="post"
+    <h1 aria-label="New task form"> {% if form.instance.pk %}Edit{% else %}Add a new{% endif %} task</h1>
+    <form aria-label="to do form" id="todoForm" method="post"
         action="{% if form.instance.pk %}{% url 'todo_update' pk=form.instance.pk %}{% else %}{% url 'todo_create' %}{% endif %}">
         {% csrf_token %}
         {{ form.as_p }}
         <div>
-            <button class="btn-custom" type="submit">Save</button>
-            <a href="{% url 'todo_list' %}" >Cancel</a>
+            <button aria-label="save new task" class="btn-custom" type="submit">Save</button>
+            <a aria-label="back to todo list" href="{% url 'todo_list' %}" >Cancel</a>
         </div>
     </form>
 </div>

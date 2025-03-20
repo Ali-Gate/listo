@@ -6,11 +6,11 @@
         <h1 id="homeMain">Sign Up</h1>
     </div>
     
-    <form method="post">
+    <form aria-label="register account form" method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <button class="btn-custom" type="submit">Sign Up</button>
-        <span><p>Already have an account? <a href="login.html">Log In</a></p></span>
+        <button aria-label="submit register information" class="btn-custom" type="submit">Sign Up</button>
+        <span><p>Already have an account? <a aria-label="go to login" href="login.html">Log In</a></p></span>
     </form>
 </div>
 {% endblock %}
