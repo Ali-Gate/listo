@@ -19,9 +19,3 @@ class User(models.Model):
 
     def __str__(self):
         return self.username
-    
-class Comment(models.Model):
-    body = models.TextField()
-
-    def __str__(self):
-        return self.body[:20]

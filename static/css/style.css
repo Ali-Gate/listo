@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Raleway:ital,wght@0,100..900;1,100..900&family=Victor+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 * {
     --bs-nav-link-color: #ffffff;
+    --bs-nav-link-font-weight: 600;
     --bs-nav-link-hover-color: #ffffff;
     --bs-btn-close-color: #ffffff;
     --bs-link-color-rgb: 82, 82, 82;
@@ -95,8 +96,7 @@ body nav .header * {
 
 .username {
     font-weight: bold;
-    -webkit-text-stroke-width: 0.4px;
-   -webkit-text-stroke-color: #ffffff;
+  
 }
 
 
@@ -134,6 +134,11 @@ table .icon-edit {
 
 table .icon-delete {
     color: rgb(82, 82, 82); /* Red color for delete icon */
+}
+
+.past-due {
+    background-color: #f8d7da; /* Light red background color */
+    color: #721c24; /* Dark red text color */
 }
 
 
@@ -181,6 +186,13 @@ form {
 form h1 {
     text-align: center;
     margin-bottom: 20px;
+}
+
+form a {
+    color: #525252;
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-left: 30px;
 }
 
 form label {

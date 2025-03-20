@@ -1,5 +1,5 @@
 from django import forms
-from .models import TodoItem, Comment
+from .models import TodoItem
 from django.contrib.auth.models import User
 
 class TodoItemForm(forms.ModelForm):
@@ -18,8 +18,4 @@ class signupForm(forms.ModelForm):
             'password': forms.PasswordInput()
         }
 
-class CommentForm(forms.ModelForm):
-    class Meta:
-        model = Comment
-        fields = ['body']
      

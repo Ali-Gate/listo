@@ -8,37 +8,37 @@
     <div class="table-responsive">
         <table class="table">
             <thead>
-                <tr>
-                    <th>Title</th>
-                    <th>Due Date</th>
-                    <th>Status</th>
-                    <th>Actions</th>
-                </tr>
+            <tr>
+                <th>Title</th>
+                <th>Due Date</th>
+                <th class="text-center">Status</th>
+                <th class="text-end">Actions</th>
+            </tr>
             </thead>
             <tbody>
-                {% for todo in todos %}
-                <tr>
-                    <td>{{ todo.title }}</td>
-                    <td>{{ todo.due_date|date:"d/m/Y" }}</td> <!-- Format the due date -->
-                    <td class="text-center">
-                        {% if todo.completed %}
-                        <i class="fa-solid fa-circle-check text-completed"></i> <!-- Completed Icon -->
-                        {% else %}
-                        <i class="fa-solid fa-clock-rotate-left text-pending"></i> <!-- Pending Icon -->
-                        {% endif %}
-                    </td>
-                    <td>
-                        <div class="d-flex justify-content-between">
-                            <a href="{% url 'todo_update' todo.pk %}" class="btn btn-sm icon-edit">
-                                <i class="fas fa-edit"></i> <!-- Edit Icon -->
-                            </a>
-                            <a href="{% url 'todo_delete' todo.pk %}" class="btn btn-sm icon-delete">
-                                <i class="fas fa-trash-alt"></i> <!-- Delete Icon -->
-                            </a>
-                        </div>
-                    </td>
-                </tr>
-                {% endfor %}
+            {% for todo in todos %}
+            <tr>
+                <td>{{ todo.title }}</td>
+                <td>{{ todo.due_date|date:"d/m/Y" }}</td> <!-- Format the due date -->
+                <td class="text-center">
+                {% if todo.completed %}
+                <i class="fa-solid fa-circle-check text-completed"></i> <!-- Completed Icon -->
+                {% else %}
+                <i class="fa-solid fa-clock-rotate-left text-pending"></i> <!-- Pending Icon -->
+                {% endif %}
+                </td>
+                <td class="text-end">
+                <div>
+                    <a href="{% url 'todo_update' todo.pk %}" class="btn btn-sm icon-edit">
+                    <i class="fas fa-edit"></i> <!-- Edit Icon -->
+                    </a>
+                    <a href="{% url 'todo_delete' todo.pk %}" class="btn btn-sm icon-delete">
+                    <i class="fas fa-trash-alt"></i> <!-- Delete Icon -->
+                    </a>
+                </div>
+                </td>
+            </tr>
+            {% endfor %}
             </tbody>
         </table>
     </div>

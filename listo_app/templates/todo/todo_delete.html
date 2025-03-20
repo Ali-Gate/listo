@@ -8,7 +8,7 @@
     <form method="post">
         {% csrf_token %}
         <button class="btn-custom" type="submit">Delete</button>
-        <button href="{% url 'todo_list' %}" class="btn-custom-secondary">Cancel</button>
+        <a href="{% url 'todo_list' %}" >Cancel</a>
     </form>
 </div>
 {% endblock %}
