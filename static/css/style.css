@@ -116,7 +116,7 @@ table td, table th {
 }
 
 tbody {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
 
 /* Table: Todo List Icons Styles */
@@ -174,9 +174,9 @@ a {
 
 /* Form Styles */
 form {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     max-width: 400px;
-    padding: 20px;
+    padding: 0px;
     margin: 20px 0px;
     background-color: #fff;
     border-radius: 8px;
@@ -212,7 +212,7 @@ form input[type="password"],
 form input[type="email"],
 form input[type="datetime-local"] {
     width: 100%;
-    padding: 10px;
+    padding: 5px;
     margin-bottom: 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
