@@ -46,7 +46,7 @@ footer {
     background-color: #f8f9fa;
     padding: 10px 0;
     text-align: center;
-    color: #009e08;
+    color: #008b07;
     font-size: 0.8rem;
     width: 100%;
     position: fixed;
@@ -55,6 +55,10 @@ footer {
 
 .align-center {
     text-align: center;
+}
+
+.align-right {
+    text-align: right;
 }
 
 /*message styles*/
@@ -66,7 +70,7 @@ footer {
 
 /* Header Styles */
 header {
-    background-color: #009e08;
+    background-color: #008b07;
     color: #ffffff;
     text-align: right;
     vertical-align: middle;
@@ -77,7 +81,7 @@ header {
 }
 
 .header {
-    background-color: #009e08;
+    background-color: #008b07;
 }
 
 body nav .header * {
@@ -112,7 +116,7 @@ table {
 }
 
 table td, table th {
-    border-color: #009e08;
+    border-color: #008b07;
 }
 
 tbody {
@@ -121,7 +125,7 @@ tbody {
 
 /* Table: Todo List Icons Styles */
 table .text-completed {
-    color: #009e08; /* Green color for completed tasks */
+    color: #008b07; /* Green color for completed tasks */
 }
 
 table .text-pending {
@@ -129,7 +133,7 @@ table .text-pending {
 }
 
 table .icon-edit {
-    color: #009e08; /* Blue color for edit icon */
+    color: #008b07; /* Blue color for edit icon */
 }
 
 table .icon-delete {
@@ -148,8 +152,9 @@ table .icon-delete {
 nav .navbar-toggler-custom {
     border-color: #ffffff; /* White border for the toggler button */
 }
+
 nav .navbar-toggler-custom .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 a {
@@ -176,7 +181,7 @@ a {
 form {
     font-size: 0.9rem;
     max-width: 400px;
-    padding: 0px;
+    padding: 10px;
     margin: 20px 0px;
     background-color: #fff;
     border-radius: 8px;
@@ -235,7 +240,7 @@ form input[type="datetime-local"] {
     text-align: center;
     text-decoration: none;
     color: #fff;
-    background-color: #009e08;
+    background-color: #008b07;
     border: none;
     border-radius: 4px;
     transition: background-color 0.3s ease;
@@ -243,7 +248,7 @@ form input[type="datetime-local"] {
 }
 
 .btn-custom:hover {
-    background-color: #009e08;
+    background-color: rgb(0, 139, 7);
     box-shadow: #525252 0px 0px 1px;
 }
 

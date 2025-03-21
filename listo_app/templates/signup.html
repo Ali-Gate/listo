@@ -3,14 +3,21 @@
 {% block content %}
 <div id="homeMain" class="container flex-column align-items-center justify-content-center" style="min-height: calc(100vh - 150px);">
     <div>
-        <h1 id="homeMain">Sign Up</h1>
+        <h1>Sign Up</h1>
     </div>
     
     <form aria-label="register account form" method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <button aria-label="submit register information" class="btn-custom" type="submit">Sign Up</button>
-        <span><p>Already have an account? <a aria-label="go to login" href="login.html">Log In</a></p></span>
+        <div class="row mt-2">
+            <div class="col-5 my-2">
+            <button aria-label="submit register information" class="btn-custom" type="submit">Sign Up</button>
+            </div>
+            <div class="col-7 mb-2 align-right">
+            <p>Already have an account?</p>
+            <a aria-label="go to login" href="login.html">Log In</a>
+            </div>
+        </div>
     </form>
 </div>
 {% endblock %}

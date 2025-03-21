@@ -7,6 +7,7 @@
         {% csrf_token %}
         {{ form.as_p }}
         <button aria-label="submit login information" class="btn-custom" type="submit">Login</button>
+        <span>Don't have an account?<a href="{% url 'signup' %}">Sign Up</a></span>
     </form>
 </div>
 {% endblock %}
