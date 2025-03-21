@@ -1,13 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Victor+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Raleway:ital,wght@0,100..900;1,100..900&family=Victor+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 * {
     --bs-nav-link-color: #ffffff;
+    --bs-nav-link-font-weight: 600;
     --bs-nav-link-hover-color: #ffffff;
     --bs-btn-close-color: #ffffff;
+    --bs-link-color-rgb: 82, 82, 82;
+    --bs-link-hover-color-rgb: 82, 82, 82;
 }
 
 /* Global Styles */
 html body {
-    font-family: "Victor Mono", monospace; 
+    font-family: "Raleway", sans-serif;
     color: #525252;
 }
 
@@ -24,6 +27,11 @@ body h1 {
     font-size: 1.7rem;
 }
 
+body p {
+    margin-top: 10px;
+    margin-bottom: 1px;
+}
+
 
 main {
     display: block;
@@ -38,8 +46,7 @@ footer {
     background-color: #f8f9fa;
     padding: 10px 0;
     text-align: center;
-    color: #009e08
-;
+    color: #008b07;
     font-size: 0.8rem;
     width: 100%;
     position: fixed;
@@ -48,6 +55,10 @@ footer {
 
 .align-center {
     text-align: center;
+}
+
+.align-right {
+    text-align: right;
 }
 
 /*message styles*/
@@ -59,8 +70,7 @@ footer {
 
 /* Header Styles */
 header {
-    background-color: #009e08
-;
+    background-color: #008b07;
     color: #ffffff;
     text-align: right;
     vertical-align: middle;
@@ -71,8 +81,7 @@ header {
 }
 
 .header {
-    background-color: #009e08
-;
+    background-color: #008b07;
 }
 
 body nav .header * {
@@ -84,15 +93,13 @@ body nav .header * {
 .salutation {
     display: inline-block;
     padding: 0px 8px 15px 0px;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     text-align: right;
     width: 100%;
 }
 
 .username {
     font-weight: bold;
-    -webkit-text-stroke-width: 1px;
-   -webkit-text-stroke-color: #ffffff;
 }
 
 
@@ -108,18 +115,16 @@ table {
 }
 
 table td, table th {
-    border-color: #009e08
-;
+    border-color: #008b07;
 }
 
 tbody {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
 
 /* Table: Todo List Icons Styles */
 table .text-completed {
-    color: #009e08
-; /* Green color for completed tasks */
+    color: #008b07; /* Green color for completed tasks */
 }
 
 table .text-pending {
@@ -127,12 +132,16 @@ table .text-pending {
 }
 
 table .icon-edit {
-    color: #009e08
-; /* Blue color for edit icon */
+    color: #008b07; /* Blue color for edit icon */
 }
 
 table .icon-delete {
-    color: #525252; /* Red color for delete icon */
+    color: rgb(82, 82, 82); /* Red color for delete icon */
+}
+
+.past-due {
+    background-color: #f8d7da; /* Light red background color */
+    color: #721c24; /* Dark red text color */
 }
 
 
@@ -142,20 +151,24 @@ table .icon-delete {
 nav .navbar-toggler-custom {
     border-color: #ffffff; /* White border for the toggler button */
 }
+
 nav .navbar-toggler-custom .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 a {
     color: #ffffff ;
     text-decoration: none;
-}
-
-.nav-link:hover {
-    text-decoration: none;
     font-weight: bold;
 }
 
+.nav-link:hover {
+    color: #d8fcaf
+}
+
+.nav-link.active {
+    font-weight: bold;
+}
 
 
 #logo_style {
@@ -165,9 +178,10 @@ a {
 
 /* Form Styles */
 form {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     max-width: 400px;
-    padding: 20px;
+    padding: 10px;
+    margin: 20px 0px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -176,6 +190,13 @@ form {
 form h1 {
     text-align: center;
     margin-bottom: 20px;
+}
+
+form a {
+    color: #525252;
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-left: 30px;
 }
 
 form label {
@@ -195,32 +216,38 @@ form input[type="password"],
 form input[type="email"],
 form input[type="datetime-local"] {
     width: 100%;
-    padding: 10px;
+    padding: 5px;
     margin-bottom: 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
+}
+
+.custom-date-input {
+    width: 100%; /* Adjust the width as needed */
+    padding: 0.375rem 0.75rem; /* Adjust the padding as needed */
+    font-size: 1rem; /* Adjust the font size as needed */
+    line-height: 1.5; /* Adjust the line height as needed */
+    border: 1px solid #ced4da; /* Adjust the border as needed */
+    border-radius: 0.25rem; /* Adjust the border radius as needed */
 }
 
 /* Global Button Styles */
 .btn-custom {
     display: inline-block;
     padding: 6px 10px;
-    font-size: 0.8rem;
-    font-weight: bold;
+    font-size: 0.9rem;
     text-align: center;
     text-decoration: none;
     color: #fff;
-    background-color: #009e08
-;
+    background-color: #008b07;
     border: none;
     border-radius: 4px;
     transition: background-color 0.3s ease;
-    margin-top: 10px;
+    margin: 10px;
 }
 
 .btn-custom:hover {
-    background-color: #009e08
-;
+    background-color: rgb(0, 139, 7);
     box-shadow: #525252 0px 0px 1px;
 }
 
@@ -233,11 +260,18 @@ form input[type="datetime-local"] {
 }
 
 .btn-custom-secondary {
-    background-color: #6c757d;
+    display: inline-block;
+    padding: 6px 10px;
+    font-size: 0.9rem;
+    background-color: #ffffff;
+    color: #525252;
+    border: 1px solid #525252;
+    border-radius: 4px;
+    margin: 10px;
 }
 
 .btn-custom-secondary:hover {
-    background-color: #5a6268;
+    font-weight: bold;
 }
 
 /* Responsiveness Media Queries
@@ -249,17 +283,15 @@ form input[type="datetime-local"] {
     }
 }
 
-#homeMain h1 {
-    padding-top: 60px;
+#homeMain {
+    margin-top: 60px;
 }
 
 /* Media Query for Small Screens main element size*/
 @media (max-width: 768px) {
-    #homeMain h1 {
-        padding-top: 0px;
-    }
     #homeMain {
         text-align: center;
+        margin-top: 0px;
     }
 }
 
