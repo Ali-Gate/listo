@@ -9,14 +9,14 @@
       <div class="modal-content">
         <div class="modal-header">
           <h1 class="modal-title fs-5" id="staticBackdropLabel">Expired due date</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" tabindex="0" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           You are creating a task with a due date in the past. Are you sure you want to proceed?
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn-custom-secondary" data-bs-dismiss="modal" aria-label="cancel">No</button>
-          <button type="button" class="btn-custom" id="confirm-submit"  aria-label="yes, create task anyway">Yes</button>
+          <button type="button" class="btn-custom-secondary" data-bs-dismiss="modal" tabindex="0" aria-label="cancel">No</button>
+          <button type="button" class="btn-custom" id="confirm-submit"  tabindex="0" aria-label="yes, create task anyway">Yes</button>
         </div>
       </div>
     </div>
@@ -24,14 +24,14 @@
 
 <div id="homeMain" class="container flex-column align-items-center justify-content-center" 
 ">
-    <h1 aria-label="New task form"> {% if form.instance.pk %}Edit{% else %}Add a new{% endif %} task</h1>
-    <form aria-label="to do form" id="todoForm" method="post"
+    <h1 tabindex="0" aria-label="New task form"> {% if form.instance.pk %}Edit{% else %}Add a new{% endif %} task</h1>
+    <form tabindex="0" aria-label="to do form" id="todoForm" method="post"
         action="{% if form.instance.pk %}{% url 'todo_update' pk=form.instance.pk %}{% else %}{% url 'todo_create' %}{% endif %}">
         {% csrf_token %}
         {{ form.as_p }}
         <div>
-            <button aria-label="save new task" class="btn-custom" type="submit">Save</button>
-            <a aria-label="back to todo list" href="{% url 'todo_list' %}" >Cancel</a>
+            <button tabindex="0" aria-label="save new task" class="btn-custom" type="submit">Save</button>
+            <a tabindex="0" aria-label="back to todo list" href="{% url 'todo_list' %}" >Cancel</a>
         </div>
     </form>
 </div>

@@ -6,10 +6,10 @@
     <h1>Delete Task?</h1>
     <p>Are you sure you want to delete "{{ todo.title }}"?</p>
     <br>
-    <form aria-label="delete task confirmation" method="post">
+    <form tabindex="0" aria-label="delete task confirmation" method="post">
         {% csrf_token %}
-        <button aria-label="delete task button" class="btn-custom" type="submit">Delete</button>
-        <a aria-label="cancel delete button" href="{% url 'todo_list' %}">Cancel</a>
+        <button tabindex="0" aria-label="delete task button" class="btn-custom" type="submit">Delete</button>
+        <a tabindex="0" aria-label="cancel delete button" href="{% url 'todo_list' %}">Cancel</a>
     </form>
 </div>
 {% endblock %}

@@ -1,6 +1,6 @@
 // filepath: c:\Users\Ali\Documents\VS_CODE projects\listo\static\js\scripts.js
 
-const modal = new bootstrap.Modal(document.getElementById('staticBackdrop'));
+const modal = new bootstrap.Modal(document.getElementById('backdrop'));
 const form = document.getElementById('todoForm');
 
 
@@ -62,3 +62,14 @@ function showToast(message, duration = 10000) {
     }
 });
 */
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Handle alert messages
+    setTimeout(function () {
+        let messages = document.getElementById('msg');
+        if (messages) {
+            let alert = new bootstrap.Alert(messages);
+            alert.close();
+        }
+    }, 2500);
+});

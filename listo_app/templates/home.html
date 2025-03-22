@@ -8,11 +8,11 @@
             {% if user.is_authenticated %}
             <p>Hi, {{ user.username }}. Let's get things done!</p>
             <p>View and manage all your tasks:</p>
-            <a aria-label="go to todo list" class="btn-custom" href="{% url 'todo_list' %}">To-Do List</a>
+            <a tabindex="0" aria-label="go to todo list" class="btn-custom" href="{% url 'todo_list' %}">To-Do List</a>
             {% else %}
-            <a aria-label="go to login" class="btn-custom" href="{% url 'login' %}">Login</a>
+            <a tabindex="0" aria-label="go to login" class="btn-custom" href="{% url 'login' %}">Login</a>
             <p>Don't have a Listo! account yet?</p>
-            <a aria-label="create new account" class="btn-custom" href="{% url 'signup' %}">Sign up</a>
+            <a tabindex="0" aria-label="create new account" class="btn-custom" href="{% url 'signup' %}">Sign up</a>
             {% endif %}
         </div>
     </div>

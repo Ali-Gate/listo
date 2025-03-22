@@ -3,10 +3,10 @@
 {% block content %}
     <div  id="homeMain" class="d-flex flex-column flex-md-row justify-content-between align-items-center mb-3">
         <h1>To-Do List</h1>
-        <a aria-label="Add new Task" href="{% url 'todo_create' %}" class="btn-custom mt-2 mt-md-0">New Task</a>
+        <a tabindex="0" aria-label="Add new Task" href="{% url 'todo_create' %}" class="btn-custom mt-2 mt-md-0">New Task</a>
     </div>
     <div class="table-responsive">
-        <table aria-label="todo list table" class="table">
+        <table tabindex="0" aria-label="todo list table" class="table">
             <thead>
             <tr>
                 <th>Title</th>
@@ -22,17 +22,17 @@
                 <td>{{ todo.due_date|date:"d/m/Y" }}</td> <!-- Format the due date -->
                 <td>
                 {% if todo.completed %}
-                <i aria-label="task completed" class="fa-solid fa-circle-check text-completed"></i> <!-- Completed Icon -->
+                <i tabindex="0" aria-label="task completed" class="fa-solid fa-circle-check text-completed"></i> <!-- Completed Icon -->
                 {% else %}
-                <i aria-label="task in progress" class="fa-solid fa-clock-rotate-left text-pending"></i> <!-- Pending Icon -->
+                <i tabindex="0" aria-label="task in progress" class="fa-solid fa-clock-rotate-left text-pending"></i> <!-- Pending Icon -->
                 {% endif %}
                 </td>
                 <td class="text-end">
                 <div>
-                    <a aria-label="edit task" href="{% url 'todo_update' todo.pk %}" class="btn btn-sm icon-edit">
+                    <a tabindex="0" aria-label="edit task" href="{% url 'todo_update' todo.pk %}" class="btn btn-sm icon-edit">
                     <i class="fas fa-edit"></i> <!-- Edit Icon -->
                     </a>
-                    <a aria-label="delete task" href="{% url 'todo_delete' todo.pk %}" class="btn btn-sm icon-delete">
+                    <a tabindex="0" aria-label="delete task" href="{% url 'todo_delete' todo.pk %}" class="btn btn-sm icon-delete">
                     <i class="fas fa-trash-alt"></i> <!-- Delete Icon -->
                     </a>
                 </div>
