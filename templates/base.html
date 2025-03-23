@@ -70,11 +70,13 @@
     </div>
     <div class="container my-3">
       <div class="row mx-0">
-        <div class="col-md-4 mb-3 align-items-center justify-content-center align-center">
-          <img tabindex="0" aria-label="listo app logo" href="{% url 'home' %}" src="{% static 'images/listo_logo_small.webp'%}"
-            alt="To do list">
+        <div class="col-12 col-lg-4 mb-3 align-items-center justify-content-center align-center">
+            <a href="{% url 'home' %}">
+            <img tabindex="0" aria-label="listo app logo" src="{% static 'images/listo_logo_small.webp'%}"
+              alt="To do list">
+            </a>
         </div>
-        <div class="col-md-8">
+        <div class="col-12 col-lg-8">
           {% block content %}
           {% endblock %}
         </div>

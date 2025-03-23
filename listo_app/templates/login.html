@@ -3,17 +3,17 @@
 {% block content %}
 <div id="homeMain" class="container flex-column align-items-center justify-content-center" 
 ">
-    <h1>Login</h1>
+    <h1>Log In</h1>
     <form aria-label="login form" method="post">
         {% csrf_token %}
         {{ form.as_p }}
-            <div class="row mt-2">
+        <div class="row mt-2">
             <div class="col-5 my-2">
-            <button aria-label="submit login information" class="btn-custom" type="submit">login</button>
+                <button aria-label="submit login information" class="btn-custom" type="submit">Log In</button>
             </div>
             <div class="col-7 mb-2 align-right">
-            <p>Don't have an account?</p>
-            <a aria-label="go to sign up form" href="signup.html">Log In</a>
+                <p>Don't have an account?</p>
+                <a aria-label="go to sign up form" href="{% url 'signup' %}">Sign Up</a>
             </div>
         </div>
     </form>

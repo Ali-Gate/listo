@@ -3,11 +3,11 @@
 {% block content %}
 <div id="homeMain" class="container flex-column align-items-center justify-content-center" 
 ">
-    <h1 >Confirm Logout</h1>
+    <h1 >Confirm Log Out</h1>
     <p>Are you sure you want to log out?</p>
     <form tabindex="0" aria-label="logout form"  method="post">
         {% csrf_token %}
-        <button tabindex="0" aria-label="Logout confirmation" class="btn-custom" type="submit">Logout</button>
+        <button tabindex="0" aria-label="Logout confirmation" class="btn-custom" type="submit">Log Out</button>
         <a tabindex="0" aria-label="remain logged in" href="{% url 'todo_list' %}">Cancel</a>
     </form>
 </div>
