@@ -22,9 +22,9 @@
                 <td tabindex="0" aria-label="task due date">{{ todo.due_date|date:"d/m/Y" }}</td> <!-- Format the due date -->
                 <td tabindex="0" aria-label="task status">
                 {% if todo.completed %}
-                <i tabindex="0" aria-label="task completed" class="fa-solid fa-circle-check text-completed"></i> <!-- Completed Icon -->
+                <i class="fa-solid fa-circle-check text-completed"></i> <!-- Completed Icon -->
                 {% else %}
-                <i tabindex="0" aria-label="task in progress" class="fa-solid fa-clock-rotate-left text-pending"></i> <!-- Pending Icon -->
+                <i class="fa-solid fa-clock-rotate-left text-pending"></i> <!-- Pending Icon -->
                 {% endif %}
                 </td>
                 <td class="text-end">
