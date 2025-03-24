@@ -48,11 +48,13 @@
       </nav>
       <div class="container-fluid">
         <div class="salutation">
-          {% if request.user.is_authenticated %}
-          You are logged in as <span class="username">{{ request.user.username }}</span>
-          {% else %}
-          You are currently not logged in
-          {% endif %}
+          <p tabindex="0" aria-live="polite">
+            {% if request.user.is_authenticated %}
+            You are logged in as <span class="username">{{ request.user.username }}</span>
+            {% else %}
+            You are currently not logged in
+            {% endif %}
+          </p>
         </div>
       </div>
     </div>
