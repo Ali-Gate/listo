@@ -5,6 +5,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Listo - A Todo List Application">
+  <!-- Add base URL for resources -->
+  <base href="https://listo-app-0473995061cf.herokuapp.com/">
   <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
   <link rel="icon" type="image/x-icon" href="{% static 'checkmark.ico' %}">
   <link rel="icon" type="image/png" sizes="32x32" href="{% static 'checkmark_png.png' %}">
@@ -48,13 +51,11 @@
       </nav>
       <div class="container-fluid">
         <div class="salutation">
-          <p tabindex="0" aria-live="polite">
-            {% if request.user.is_authenticated %}
-            You are logged in as <span class="username">{{ request.user.username }}</span>
-            {% else %}
-            You are currently not logged in
-            {% endif %}
-          </p>
+          {% if request.user.is_authenticated %}
+          <p>You are logged in as <span class="username">{{ request.user.username }}</span></p>
+          {% else %}
+          <p>You are currently not logged in</p>
+          {% endif %}
         </div>
       </div>
     </div>
