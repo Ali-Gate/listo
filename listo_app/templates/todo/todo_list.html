@@ -18,9 +18,9 @@
             <tbody>
             {% for todo in todos %}
             <tr>
-                <td tabindex="0" aria-label="task title">{{ todo.title }}</td>
-                <td tabindex="0" aria-label="task due date">{{ todo.due_date|date:"d/m/Y" }}</td> <!-- Format the due date -->
-                <td tabindex="0" aria-label="task status">
+                <td>{{ todo.title }}</td>
+                <td>{{ todo.due_date|date:"d/m/Y" }}</td> <!-- Format the due date -->
+                <td>
                 {% if todo.completed %}
                 <i class="fa-solid fa-circle-check text-completed"></i> <!-- Completed Icon -->
                 {% else %}
