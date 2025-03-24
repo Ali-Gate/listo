@@ -24,7 +24,6 @@
 
 <div id="homeMain" class="container flex-column align-items-center justify-content-center">
     <h1 tabindex="0" aria-label="New task form"> {% if form.instance.pk %}Edit{% else %}Add a new{% endif %} task</h1>
-    <div with="100%">
       <form tabindex="0" aria-label="to do form" id="todoForm" method="post"
         action="{% if form.instance.pk %}{% url 'todo_update' pk=form.instance.pk %}{% else %}{% url 'todo_create' %}{% endif %}">
         {% csrf_token %}
@@ -34,6 +33,5 @@
           <a tabindex="0" aria-label="back to todo list" href="{% url 'todo_list' %}">Cancel</a>
         </div>
       </form>
-    </div>
 </div>
 {% endblock %}

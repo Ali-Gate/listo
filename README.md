@@ -12,13 +12,18 @@ For future iterations I aim to extend the features for project teams and  organi
 ## App description
 ### **User accounts**
 ### MVP
-The user will be able to Sign Up, log in and log out for the first iteration 
+The user will be able to Sign Up, log in and log out as well as access a customised view  of their account so that users can manage their personal todo list.
+
+The user will see a notification after every of the above actions including a confirmation prompt when logging out.
 ### Future iterations
-Users will be able to edit their account details and reset their passwords, as well as receiving a confirmation email after any account specific activity.
+Users will be able to edit their account details and reset their passwords, as well as receive a confirmation email after any account specific activity.
+
+
 Users will be able to access a team account using their personal account with authorisation to securely access team privileges through invitation.
-### **Tasks App usage**
+### **Todo List App usage**
 ### MVP
 The user will be able to create, edit, set the stage of progression of their tasks and once completed they will be able to delete them for the first iteration.
+
 The user will see a notification after every of the above actions including a confirmation prompt when deleting tasks.
 
 ### Future iterations
@@ -66,28 +71,27 @@ Users will be able to use a calendar/planner which could also be accessed by tea
 
 
 
-## Initial site folder structure
+## Project Planning
 
 
 ### **User Flow Diagram**
+### **Wireframes**
 
-### **Entities/Models**
+### **Data Models**
 
-### Task model class (models.py)
-The association between users and tasks ensures privacy and personalization
+### Task model class 
+The association between users and tasks ensures privacy and personalization.
 This connection allows for tailored task management features, such as personalized notifications. By maintaining this association, the app can provide a more organized and efficient task management experience, enhancing overall user satisfaction.
-
-### Task Form model class (forms.py)
-The association between tasks and task forms ensures structured data entry and consistency in task management.
-This relationship helps maintain the integrity of task information and provides a user-friendly way to input and update task details.
-
-
-
 
 ### User  model class
 The User entity represents individuals who Sign Up and interact with the Listo! app. 
 Each user has unique attributes such as a username, email, and password, ensuring secure access and personalized task management. 
 This association allows users to manage their tasks independently, maintaining privacy and organization, while also enabling features like personalized notifications and progress tracking.
+
+
+### Task Form model class (forms.py)
+The association between tasks and task forms ensures structured data entry and consistency in task management.
+This relationship helps maintain the integrity of task information and provides a user-friendly way to input and update task details.
 
 
 ## Views
@@ -112,7 +116,8 @@ Base.html hol;ds the content of the other views
 
 
 
-### Manual Feature Testing
+## Manual Testing
+### Feature Testing
 
 |Page|Feature|Action|Effect|Checked|
 |---|---|---|---|---|
@@ -159,7 +164,12 @@ Base.html hol;ds the content of the other views
 |past due date modal|modal YES button|click|confirm date in the past is accepted and creates new task, redirects to todo_list|----X----
 |past due date modal|modal NO button|click|rejects date in the past and returnds to todo_form|----X----
 |past due date modal|modal X button|click|dismisses and returnds to todo_form|----X----
-|Logout Confirm Page|Sign Out button|Click|Redirects tologout_confirmation|
-|Logout_confirm|Confirm logout|Click 'ok'|Redirects to home page and shows message|----X----
+|Logout from all pages if logged in|Sign Out button|Click|Redirects tologout_confirmation|
+|Logout_confirm page|Confirm logout|Click 'ok'|Redirects to home page and shows message|----X----
 |Pop messages|Message on loggout|Logout|Successful signout message appears|----X----
-|Logout_confirm|Confirm logout|Click 'cancel'|Redirects to todo_list page|----X----
+|Logout_confirm page|Confirm logout|Click 'cancel'|Redirects to todo_list page|----X----
+
+### Responsiveness Testing
+
+**Mobile device**
+Using Dev Tools devices settions, Samsung Galaxy S8+

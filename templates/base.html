@@ -19,7 +19,7 @@
     <div class="header">
       <nav tabindex="0" aria-label="navigation bar" class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid mt-2">
-          <button class="navbar-toggler navbar-toggler-custom ms-auto" aria-label="expandable main navigation" menu type="button" data-bs-toggle="collapse"
+          <button class="navbar-toggler navbar-toggler-custom ms-auto" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon navbar-toggler-custom"></span>
           </button>
@@ -71,8 +71,8 @@
     <div class="container my-3">
       <div class="row mx-0">
         <div class="col-12 col-lg-4 mb-3 align-items-center justify-content-center align-center">
-            <a href="{% url 'home' %}">
-            <img tabindex="0" aria-label="listo app logo" src="{% static 'images/listo_logo_small.webp'%}"
+            <a aria-label="listo app logo. go to home page" href="{% url 'home' %}">
+            <img tabindex="0" src="{% static 'images/listo_logo_small.webp'%}"
               alt="To do list">
             </a>
         </div>

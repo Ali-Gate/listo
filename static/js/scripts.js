@@ -3,7 +3,6 @@
 const form = document.getElementById('todoForm');
 
 if (form) {
-    //document.activeElement.blur(); // Remove focus from the submit button
     const modal = new bootstrap.Modal(document.getElementById('staticBackdrop'));
 
     form.addEventListener('submit', function(event) {
