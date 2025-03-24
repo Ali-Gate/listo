@@ -6,8 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Listo - A Todo List Application">
-  <!-- Add base URL for resources -->
-  <base href="https://listo-app-0473995061cf.herokuapp.com/">
+  <!-- Remove base tag as it breaks relative paths -->
   <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
   <link rel="icon" type="image/x-icon" href="{% static 'checkmark.ico' %}">
   <link rel="icon" type="image/png" sizes="32x32" href="{% static 'checkmark_png.png' %}">
@@ -61,7 +60,7 @@
     </div>
   </header>
 
-  <main tabindex="0" aria-label="main content">
+  <main tabindex="0" aria-label="main content"></main>
     <!-- Messages -->
     <div class="container">
       {% for message in messages %}
@@ -86,7 +85,7 @@
     </div>   
   </main>
 
-  <footer tabindex="0" aria-label="footer" class="footer page-footer">
+  <footer tabindex="0" aria-label="footer" class="footer page-footer"></footer>
     <div class="container">
       <p class="mb-0">&copy; 2025 Listo App</p>
     </div>
