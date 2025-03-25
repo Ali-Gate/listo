@@ -46,7 +46,7 @@ footer {
     background-color: #f8f9fa;
     padding: 10px 0;
     text-align: center;
-    color: #008b07;
+    color: #006605;
     font-size: 0.8rem;
     width: 100%;
     position: fixed;
@@ -70,7 +70,7 @@ footer {
 
 /* Header Styles */
 header {
-    background-color: #008b07;
+    background-color: #006605;
     color: #ffffff;
     text-align: right;
     vertical-align: middle;
@@ -81,11 +81,11 @@ header {
 }
 
 .header {
-    background-color: #008b07;
+    background-color: #006605;
 }
 
 body nav .header * {
-    color: #ffffff todoItemForm;
+    color: #ffffff;
     text-align: right;
     vertical-align: middle;
 }
@@ -115,7 +115,7 @@ table {
 }
 
 table td, table th {
-    border-color: #008b07;
+    border-color: #006605;
 }
 
 tbody {
@@ -124,7 +124,7 @@ tbody {
 
 /* Table: Todo List Icons Styles */
 table .text-completed {
-    color: #008b07; /* Green color for completed tasks */
+    color: #006605; /* Green color for completed tasks */
 }
 
 table .text-pending {
@@ -132,7 +132,7 @@ table .text-pending {
 }
 
 table .icon-edit {
-    color: #008b07; /* Blue color for edit icon */
+    color: #006605; /* Blue color for edit icon */
 }
 
 table .icon-delete {
@@ -239,7 +239,7 @@ form input[type="datetime-local"] {
     text-align: center;
     text-decoration: none;
     color: #fff;
-    background-color: #008b07;
+    background-color: #006605;
     border: none;
     border-radius: 4px;
     transition: background-color 0.3s ease;
@@ -247,7 +247,7 @@ form input[type="datetime-local"] {
 }
 
 .btn-custom:hover {
-    background-color: rgb(0, 139, 7);
+    background-color: #006605;
     box-shadow: #525252 0px 0px 1px;
 }
 
