@@ -514,12 +514,19 @@ There's a persistent warning about the html aria labelling of my modal but I cho
 
 ### Python Linting
 - I installed Flake8 in my VS Code Workspace and checked each python file going over each of the errors and getting Copilot's assistance to fix indentation and spaces errors. 
-- There are 2 indentation persistent errors which I later passed through CI online linter tool but still was not able to fix after trying many options. It does not affect the funtioning of the code so I let them be.
+
 
 **Results**
 
 Here's the only remaining errors I could not work out.
 
+
+
+1.It shows env is an unused import which I wasn't fully convinced it wouldn't affect my app since I have an env file were I keep my protected information. I didn't remove the unused import.
+
+![Environment Import Error](static/images/testing/env_importerror.PNG)
+
+2. These 2 persistent indentation errors which I later passed through CI online linter tool but still was not able to fix after trying many options. I tried manually and with the help of copilot to no avail. It does not affect the funtioning of the code so I let them be. 
 
 ![Persistent Errors Views](static\images\testing\persistent_errors_views.PNG)
 

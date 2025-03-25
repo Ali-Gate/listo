@@ -302,10 +302,3 @@ form input[type="datetime-local"] {
         margin-right: auto;
     }
 }
-
-/* Media Query for Medium Screens */
-/*@media (min-width: 577px) and (max-width: 992px) {
-    #homeMain {
-        padding-top: 0px;      
-    }
-} */
