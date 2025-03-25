@@ -766,6 +766,24 @@ Along the development process I learnt to be less and less reliant on Copilot's 
 
 [Return to Table of Contents](#table-of-contents)
 
+
+# Potential future features
+
+### Future iterations
+- Users will be able to edit their account details and reset their passwords, as well as receive a confirmation email after any account specific activity.
+- Users will be able to access a team account using their personal account with authorisation to securely access team privileges through invitation.
+- Users will be able to categorise tasks by topic, priority and deadline as well as access specific views.
+- Users will be able to order the tasks by due date, priority and alphabetic order.
+- Users will be able to choose from 3 status: not started, in progress and completed and move the tasks from one view to another.
+- Users will be able to access team to-do lists which team members will be able to access from their personal accounts through permissions.
+- Users will be able to use a calendar/planner which could also be accessed by teams colour coded per account (either team or individual).
+- Users will be able to edit their account details and reset their passwords, as well as receive a confirmation email after any account specific activity.
+- Unauthorised access of pages will be handled with a custom 404 page and redirect accordingly.
+- Users will receive reminder notification close to the due date of tasks via email/phone
+- Sound effects will be implemented upon actions.
+
+
+
 # Credits and Resources
 
 ## Code Resources
