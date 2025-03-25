@@ -3,7 +3,7 @@
 
 {% block content %}
   
-  <!-- Modal -->
+  <!-- Modal appears for confirmation upon attempting to create a task past its due date-->
   <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" aria-label="warning creating task after due date">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -22,10 +22,12 @@
     </div>
   </div>
 
+  <!-- Fetches todoForm for creating or updating task-->
+
 <div id="homeMain" class="container flex-column align-items-center justify-content-center">
     <h1 tabindex="0" aria-label="New task form"> {% if form.instance.pk %}Edit{% else %}Add a new{% endif %} task</h1>
       <form tabindex="0" aria-label="to do form" id="todoForm" method="post"
-        action="{% if form.instance.pk %}{% url 'todo_update' pk=form.instance.pk %}{% else %}{% url 'todo_create' %}{% endif %}">
+        action="{% if form.instance.pk %}{% url 'todo_update' pk=form.instance.pk %}{% else %}{% url 'todo_create' %}{% endif %}"> <!-- if the form has an instance, it's an update, otherwise it's a create -->
         {% csrf_token %}
         {{ form.as_p }}
         <div>

@@ -5,10 +5,12 @@
     <div>
         <h1>Welcome to Listo! App</h1>
         <div class="my-2">
+            <!-- If user is authenticated, display a welcome message and a link to the to-do list page -->
             {% if user.is_authenticated %}
             <p>Hi, {{ user.username }}. Let's get things done!</p>
             <p>View and manage all your tasks:</p>
             <a tabindex="0" aria-label="go to todo list" class="btn-custom" href="{% url 'todo_list' %}">To-Do List</a>
+            <!-- If user is not authenticated, display a login link and a sign up link -->
             {% else %}
             <a tabindex="0" aria-label="go to login" class="btn-custom" href="{% url 'login' %}">Login</a>
             <p>Don't have a Listo! account yet?</p>

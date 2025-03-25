@@ -20,6 +20,10 @@ from django.views.generic import RedirectView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('todo/', include('listo_app.urls')),  
-    path('', RedirectView.as_view(url='/todo/', permanent=True)),  # Redirect root URL to /todo/
+    path('todo/', include('listo_app.urls')),
+    path('',
+         RedirectView.as_view(
+             url='/todo/',
+             permanent=True),  # Redirect root URL to /todo/
+         ),
 ]

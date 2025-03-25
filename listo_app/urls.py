@@ -1,5 +1,4 @@
 from django.urls import path
-from .views import home, user_login, user_logout, todo_list, todo_create_or_update, todo_delete, signup
 from . import views
 
 

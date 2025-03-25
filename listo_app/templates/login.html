@@ -2,6 +2,7 @@
 <!-- filepath: c:\Users\Ali\Documents\VS_CODE projects\listo\listo_app\templates\login.html -->
 {% block content %}
 <div id="homeMain" class="container flex-column align-items-center justify-content-center">
+      <!-- Fetches loginForm for user login-->
     <form aria-label="login form" method="post">
         {% csrf_token %}
         {{ form.as_p }}
@@ -11,6 +12,7 @@
             </div>
             <div class="col-7 mb-2 align-right">
                 <p>Don't have an account?</p>
+                <!-- redirects to signup page-->
                 <a aria-label="go to sign up form" href="{% url 'signup' %}">Sign Up</a>
             </div>
         </div>
